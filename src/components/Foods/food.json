@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 0 ,
+        "name":"Cheese Burger",
+        "price": 3.88
+
+    },
+    {
+        "id" : 0 ,
+        "name":"Cheese Burger",
+        "price": 3.88
+
+    },
+    {
+        "id" : 1 ,
+        "name":"Thai Soup",
+        "price": 2.79
+
+    },
+    {
+        "id" : 2 ,
+        "name":"Crispy Sandwitch",
+        "price": 3
+
+    },
+    {
+        "id" : 3 ,
+        "name":"Dancake",
+        "price": 1.99
+
+    },
+    {
+        "id" : 4 ,
+        "name":"Mac Burger",
+        "price": 2.99
+
+    }
+]
