@@ -13,24 +13,32 @@ import { LocationOn } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
 
 
-const Banner = () => {
+interface IProps {
+  title:string,
+  subtitle:string,
+  isHomePage?:boolean
+}
+
+const Banner = ({title,subtitle,isHomePage=false}:IProps) => {
   const [accordion, setAccordion] = useState(true);
   return (
     <Container
       maxWidth="xl"
       sx={{
         backgroundColor: "secondary.main",
-        height: { md: "calc(100vh - 100px)", xs: "calc(100vh - 170px)" },
+        height: { md: !isHomePage? 400 :"calc(100vh - 100px)", xs: !isHomePage? 400 :"calc(100vh - 170px)" },
       }}
     >
       <Container sx={{ height: "100%" }}>
         <Stack maxWidth={800} height="100%" justifyContent="center" gap={2} position="relative">
           <Typography fontSize={70} fontWeight={800} color="white">
-            Are you starving?
+            {title}
           </Typography>
           <Typography color="#504F4F">
-            Within a few clicks, find meals that are accessible near you
+          {subtitle} 
           </Typography>
+    {
+      isHomePage &&
 
           <Stack bgcolor="white" p={3} borderRadius={3}>
             <Stack flexDirection="row" gap={1}>
@@ -64,7 +72,7 @@ const Banner = () => {
                       Enter Your Adddress
                     </Stack>
                   }
-                  variant="filled"
+                  variant="outlined"
                 />
 
                 <Button variant="contained">
@@ -76,6 +84,7 @@ const Banner = () => {
               </Stack>
             )) || <Stack>  </Stack>}
           </Stack>
+    }
         </Stack>
     
       </Container>
