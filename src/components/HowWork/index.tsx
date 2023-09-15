@@ -43,12 +43,12 @@ const HowWork = () => {
       }}
     >
       <Container maxWidth="md">
-        <Stack p={10} alignItems="center" gap={4}>
+        <Stack p={{md:10 , sm:5}} py={{xs:4}} alignItems="center" gap={4}>
             
-        <Typography fontSize={40} color="primary.main" fontWeight={700}>
+        <Typography fontSize={{md:40,xs:20}} color="primary.main" fontWeight={700}>
           How does it work
         </Typography>
-        <Stack flexDirection="row" gap={2} flexWrap="nowrap">
+        <Stack flexDirection="row" gap={2} flexWrap={{md:"nowrap",xs:"wrap"}}>
             {hows.map((how)=>{
                 return(
                     <HowInfo key={how.id} {...how}/>

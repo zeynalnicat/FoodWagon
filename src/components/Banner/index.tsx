@@ -26,12 +26,12 @@ const Banner = ({title,subtitle,isHomePage=false}:IProps) => {
       maxWidth="xl"
       sx={{
         backgroundColor: "secondary.main",
-        height: { md: !isHomePage? 400 :"calc(100vh - 100px)", xs: !isHomePage? 400 :"calc(100vh - 170px)" },
+        height: { md: !isHomePage? 400 :"calc(100vh - 100px)", xs: !isHomePage? 400 :"calc(100vh - 70px)" },
       }}
     >
       <Container sx={{ height: "100%" }}>
         <Stack maxWidth={800} height="100%" justifyContent="center" gap={2} position="relative">
-          <Typography fontSize={70} fontWeight={800} color="white">
+          <Typography fontSize={{md:70,xs:40}} fontWeight={800} color="white">
             {title}
           </Typography>
           <Typography color="#504F4F">
@@ -82,7 +82,7 @@ const Banner = ({title,subtitle,isHomePage=false}:IProps) => {
                   </Stack>
                 </Button>
               </Stack>
-            )) || <Stack>  </Stack>}
+            )) || <Stack p={4}> Coming soon! </Stack>}
           </Stack>
     }
         </Stack>
