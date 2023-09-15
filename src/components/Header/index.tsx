@@ -26,6 +26,7 @@ interface FoodItems {
   price?: number;
 }
 const Header = () => {
+  const [cartShow , setCartShow] = useState(false)
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );
@@ -151,11 +152,18 @@ const Header = () => {
   </Popper>
 )}
 
-          <Link to="/cart">
-            <Badge badgeContent={cartSize} color="secondary">
-              <ShoppingCartIcon color="primary" />
+          <Link to="/cart" >
+            <Badge  badgeContent={cartSize} color="secondary">
+          <Stack position="relative">
+              <IconButton onMouseEnter={()=> setCartShow(true)} onMouseLeave={()=>setCartShow(false)}>
+              <ShoppingCartIcon  color="primary" /> 
+              </IconButton>
+          </Stack>
             </Badge>
           </Link>
+          {
+           cart.length==0 && cartShow && <Stack position="absolute" top={70} right={200} bgcolor="#eee" p={2} borderRadius={4} ><Typography>No item in your cart</Typography></Stack>
+          }
           <Button color="secondary" sx={{ borderRadius: 2 }} variant="outlined">
             <Stack flexDirection="row">
               <PersonIcon />
