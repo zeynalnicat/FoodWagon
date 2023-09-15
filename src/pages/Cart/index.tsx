@@ -4,6 +4,7 @@ import Banner from "../../components/Banner";
 import Header from "../../components/Header";
 import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import ItemsInfo from "../../components/PopularItems/info";
+import Footer from "../../components/Footer";
 
 interface CartItem {
   id: number;
@@ -65,7 +66,10 @@ const Cart = () => {
           </Button>
         </Stack>
         }
+
+        {cart.length==0 && <Container maxWidth="xs"><Typography fontSize={30} fontWeight={700}>No any items in your cart</Typography></Container>}
       </Container>
+      <Footer/>
     </Stack>
   );
 };
