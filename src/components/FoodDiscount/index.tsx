@@ -38,6 +38,20 @@ const food = [
         foodName: "Greys Vage",
         expireDate : 8
     },
+    {
+        id : 4,
+        imgSrc: food4,
+        discount: 20,
+        foodName: "Greys Vage",
+        expireDate : 8
+    },
+    {
+        id : 5,
+        imgSrc: food4,
+        discount: 20,
+        foodName: "Greys Vage",
+        expireDate : 8
+    },
     
 ]
 
