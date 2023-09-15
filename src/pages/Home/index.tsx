@@ -4,6 +4,7 @@ import Banner from '../../components/Banner'
 import FoodDiscount from '../../components/FoodDiscount'
 import HowWork from '../../components/HowWork'
 import PopularItems from '../../components/PopularItems'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <FoodDiscount/>
         <HowWork/>
         <PopularItems/>
-          
+          <Footer/>
       </Stack>
   )
 }
