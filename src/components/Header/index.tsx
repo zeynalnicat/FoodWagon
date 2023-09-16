@@ -26,7 +26,7 @@ interface FoodItems {
   price?: number;
 }
 const Header = () => {
-  const [cartShow , setCartShow] = useState(false)
+  const [cartShow, setCartShow] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );
@@ -50,7 +50,7 @@ const Header = () => {
       const result = food.find(({ name }) =>
         name.toLowerCase().includes(searchResult.toLowerCase())
       );
-  
+
       if (result !== undefined && result !== null) {
         setFoundFood(result as FoodItems);
       }
@@ -117,61 +117,86 @@ const Header = () => {
             </Stack>
           )}
 
-{search && foundFood &&  (
-  <Popper
-    open={Boolean(anchorEl)}
-    anchorEl={anchorEl}
-    anchorOrigin={{
-      vertical: "bottom",
-      horizontal: "left",
-    }}
-    transformOrigin={{
-      vertical: "top",
-      horizontal: "left",
-    }}
-  >
-    <Stack
-      sx={{
-        padding: 2,
-        backgroundColor: "white",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
-        borderRadius: 4,
-      }}
-    >
-     
-        <Grid container spacing={2} key={foundFood.id}>
-          <Grid item xs={6}>
-            <Typography variant="subtitle1">{foundFood.name}</Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <Typography variant="subtitle1">${foundFood.price}</Typography>
-          </Grid>
-        </Grid>
+          {search && foundFood && (
+            <Popper
+              open={Boolean(anchorEl)}
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+            >
+              <Stack
+                sx={{
+                  padding: 2,
+                  backgroundColor: "white",
+                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                  borderRadius: 4,
+                }}
+              >
+                <Grid container spacing={2} key={foundFood.id}>
+                  <Grid item xs={6}>
+                    <Typography variant="subtitle1">
+                      {foundFood.name}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography variant="subtitle1">
+                      ${foundFood.price}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Stack>
+            </Popper>
+          )}
 
-    </Stack>
-  </Popper>
-)}
-
-          <Link to="/cart" >
-            <Badge  badgeContent={cartSize} color="secondary">
-          <Stack position="relative">
-              <IconButton onMouseEnter={()=> setCartShow(true)} onMouseLeave={()=>setCartShow(false)}>
-              <ShoppingCartIcon  color="primary" /> 
-              </IconButton>
-          </Stack>
+          <Link to="/cart">
+            <Badge badgeContent={cartSize} color="secondary">
+              <Stack position="relative">
+                <IconButton
+                  onMouseEnter={() => setCartShow(true)}
+                  onMouseLeave={() => setCartShow(false)}
+                >
+                  <ShoppingCartIcon color="primary" />
+                </IconButton>
+              </Stack>
             </Badge>
           </Link>
-          {
-           cart.length==0 && cartShow && <Stack position="absolute" top={70} right={200} bgcolor="#eee" p={2} borderRadius={4} ><Typography>No item in your cart</Typography></Stack>
-          }
-          <Button color="secondary" sx={{ borderRadius: 2 }} variant="outlined">
-            <Stack flexDirection="row">
-              <PersonIcon />
-              <Typography textTransform="capitalize" fontWeight={700}>
-                Login
-              </Typography>
+          {cart.length == 0 && cartShow && (
+            <Stack
+              position="absolute"
+              top={70}
+              right={200}
+              bgcolor="#eee"
+              p={2}
+              borderRadius={4}
+            >
+              <Typography>No item in your cart</Typography>
             </Stack>
-          </Button>
+          )}
+          <Link to="/login">
+            <Stack color="secondary.main">
+              <Stack
+                flexDirection="row"
+                border="1px solid"
+                p={1}
+                borderRadius={2}
+              >
+                <PersonIcon />
+                <Typography
+                  color="secondary.main"
+                  textTransform="capitalize"
+                  fontWeight={700}
+                >
+                  Login
+                </Typography>
+              </Stack>
+            </Stack>
+          </Link>
         </Stack>
       </Stack>
     </Container>
