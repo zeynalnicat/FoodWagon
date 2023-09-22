@@ -10,6 +10,9 @@ const theme = createTheme({
         },
         warning: {
             main: "#F17228"
+        },
+        success: {
+            main: "#79B93C33"
         }
     },
     
