@@ -146,8 +146,8 @@ const footerLink = [
         link: "/help",
       },
       {
-        name: "Partner with us",
-        link: "/partner-us",
+        name: "Form",
+        link: "/form",
       },
       {
         name: "Ride with us",
