@@ -1,3 +1,48 @@
 {
-  "cart": []
+  "cart": [
+    {
+      "id": 2,
+      "img": "/src/assets/PopularItems/food3.png",
+      "itemName": "Dancake",
+      "location": "Cake World",
+      "price": 1.99
+    },
+    {
+      "id": 4,
+      "img": "/src/assets/PopularItems/food5.png",
+      "itemName": "Thai  Soup",
+      "location": "Foody man",
+      "price": 2.79
+    },
+    {
+      "id": 3,
+      "img": "/src/assets/PopularItems/food4.png",
+      "itemName": "Crispy Sandwitch",
+      "location": "Fastfood Dine",
+      "price": 3
+    }
+  ],
+  "form": [
+    {
+      "id": "fe816456-7264-488e-8271-41edb367b2dd",
+      "firstname": "Alfred",
+      "lastname": "Orange",
+      "email": "alfred_orange@gmail.com",
+      "comment": "It was way more comfortable to purchase online . But note that , kfc does not send its check"
+    },
+    {
+      "id": "40873fa5-0bd1-4e90-8d09-2d3557d3d031",
+      "firstname": "Nijat",
+      "lastname": "Zeynalli",
+      "email": "nicatt.zeynalli@gmail.com",
+      "comment": "I ordered two medium size burger menu , but got small size instead . I did not like the way they refunded me . Bad service !!!!! "
+    },
+    {
+      "id": "f3685243-662a-41d8-9c2e-cee3985ca51f",
+      "firstname": "Julia",
+      "lastname": "White",
+      "email": "juliawhite@outlook.com",
+      "comment": "I am thinking to get into the service more. It is really fast and comes with best price!"
+    }
+  ]
 }
