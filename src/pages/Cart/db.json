@@ -43,6 +43,13 @@
       "lastname": "White",
       "email": "juliawhite@outlook.com",
       "comment": "I am thinking to get into the service more. It is really fast and comes with best price!"
+    },
+    {
+      "id": "532ba7e0-4744-482d-ab23-6ebee10aa96d",
+      "firstname": "Seymur",
+      "lastname": "Zeynalli",
+      "email": "seymur@gmail.com",
+      "comment": "It was nice"
     }
   ]
 }
