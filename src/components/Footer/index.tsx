@@ -1,4 +1,10 @@
-import { Facebook, Instagram, Mail, Twitter } from "@mui/icons-material";
+import {
+  Facebook,
+  GitHub,
+  Instagram,
+  Mail,
+  Twitter,
+} from "@mui/icons-material";
 import {
   Button,
   Container,
@@ -261,15 +267,22 @@ const Footer = () => {
             <Stack>
               <Typography>FOLLOW US</Typography>
               <Stack flexDirection="row">
-                <IconButton>
-                  <Instagram sx={{ color: "#5A5766" }} />
-                </IconButton>
-                <IconButton sx={{ color: "#5A5766" }}>
-                  <Facebook />
-                </IconButton>
-                <IconButton sx={{ color: "#5A5766" }}>
-                  <Twitter />
-                </IconButton>
+                <a href="https://www.instagram.com/affuross/">
+                  <IconButton>
+                    <Instagram sx={{ color: "#5A5766" }} />
+                  </IconButton>
+                </a>
+
+                <a href="https://github.com/zeynalnicat">
+                  <IconButton>
+                    <GitHub />
+                  </IconButton>
+                </a>
+                <a href="https://twitter.com/affuros">
+                  <IconButton sx={{ color: "#5A5766" }}>
+                    <Twitter />
+                  </IconButton>
+                </a>
               </Stack>
 
               <Typography py={3}>
