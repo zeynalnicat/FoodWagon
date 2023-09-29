@@ -20,11 +20,17 @@ const ItemsInfo = ({
   isCart = false,
 }: IProps) => {
   const handleRemoveItem = async () => {
-    try {
-      await axios.delete(`http://localhost:3000/cart/${id}`);
-      window.location.reload();
-    } catch (error) {
-      console.error('Error removing item:', error);
+    
+    if(confirm("Sure to remove this item from cart?")){
+
+      try {
+        await axios.delete(`http://localhost:3000/cart/${id}`);
+        window.location.reload();
+      } catch (error) {
+        console.error('Error removing item:', error);
+      }
+    }else{
+      return
     }
   };
   return (
@@ -51,6 +57,10 @@ const ItemsInfo = ({
                 itemName: name,
                 location: location,
                 price: price,
+              }).then(()=>{
+                alert("Succesfuly added to the cart!")
+              }).catch((error)=>{
+                console.error(error)
               })
             }
           >
