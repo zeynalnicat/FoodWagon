@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import ItemsInfo from "../../components/PopularItems/info";
 import Footer from "../../components/Footer";
+import Loading from "../../components/Loading";
 
 interface CartItem {
   id: number;
@@ -16,9 +17,11 @@ interface CartItem {
 
 const Cart = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [isLoading , setIsLoading] = useState(true)
   useEffect(() => {
     axios.get("http://localhost:3000/cart").then(({ data }) => {
       setCart(data);
+      setIsLoading(false)
     });
   }, []);
 
@@ -35,6 +38,9 @@ const Cart = () => {
       <Header />
       <Banner title="Cart" subtitle="Order your items in cart" />
       <Container sx={{ py: 10 }}>
+        {
+          isLoading && <Loading/>
+        }
         <Grid container columnGap={{ sm: 4, md: 0 }} rowGap={5}>
           {cart.map((item: any) => {
             return (
