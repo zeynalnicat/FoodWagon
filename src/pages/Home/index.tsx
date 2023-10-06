@@ -7,6 +7,7 @@ import PopularItems from "../../components/PopularItems";
 import Footer from "../../components/Footer";
 import FeaturedRestaurants from "../../components/FeaturedRestaurants";
 import FooterUp from "../../components/FooterUp";
+import Deals from "../../components/Deals";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <HowWork />
       <PopularItems />
       <FeaturedRestaurants />
+      <Deals/>
       <FooterUp />
       <Footer />
     </Stack>
