@@ -1,33 +1,47 @@
-import { ChevronRight } from "@mui/icons-material"
-import { Button, Container, Grid, Stack, Typography } from "@mui/material"
-import sandwitch from "../../assets/Deals/Image.png"
+
+import { Container, Stack} from "@mui/material"
+import sandwitch from "../../assets/Deals/sandwitch.png"
+import chicken from "../../assets/Deals/chicken.png"
+import pizza from "../../assets/Deals/pizza.png"
+
+import DealInfo from "./dealInfo"
+
+
+const deals = [
+  {
+    id:0,
+    name:"Best deals ",
+    imgSrc : sandwitch,
+    subname:"Crispy Sandwiches",
+    description:"Enjoy the large size of sandwiches. Complete perfect slice of sandwiches"
+  },
+  
+  {
+    id:1,
+    name:"Celebrate  parties with  ",
+    imgSrc : chicken ,
+    subname:"Fried Chicken",
+    isRight: false,
+    description:"Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out best deals for fried chicken."
+  },
+  {
+    id:2,
+    name:"Wanna eat hot & spicy ",
+    imgSrc : pizza,
+    subname:"Pizza?",
+    description:"Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals."
+  },
+
+]
 
 const Deals = () => {
   return (
-    <Container >
-        <Grid container spacing={10} sx={{boxShadow: "2px 6px 4px rgba(0, 0, 0, 0.4) ", marginY:4 ,borderRadius: '8px', transition: 'box-shadow 0.3s ease',
-    '&:hover': {
-      boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.4)',
-    },}}>
-            <Grid item md={4} xs={12} padding={5} >
-                <Stack gap={3} padding={4}>
+    <Container sx={{my:10}} >
+      <Stack gap={8}>
 
-                <Typography fontSize={32} fontWeight={700}>Best Deals <span style={{color:"orange"}}>Crispy Sandwitches</span></Typography>
-                <Typography >Enjoy the large size of sandwiches. Complete 
-perfect slice of sandwiches.</Typography>
-
-         <Button color="secondary" variant="contained" sx={{color:"white"}} >Proceed to order <ChevronRight/></Button>
-                </Stack>
-            </Grid>
-
-            <Grid item md={8} xs={12}>
-                <Stack>
-                <img src ={sandwitch}/>
-                </Stack>
-            </Grid>
-
-        </Grid>
-
+      {deals.map((deal)=>{
+        return <DealInfo key={deal.id} {...deal}/>      })}
+        </Stack>
     </Container>
   )
 }
