@@ -37,7 +37,7 @@ const DealInfo = ({ imgSrc, name, subname,description, isRight=true }: IProps) =
           </Typography>
           </Stack>
           <Stack>
-          <Button color="secondary" variant="contained" sx={{ color: "white" }}>
+          <Button color="secondary" variant="contained" sx={{ color: "white" , textTransform:"capitalize"}}>
             Proceed to order <ChevronRight />
           </Button>
           </Stack>
@@ -68,7 +68,7 @@ const DealInfo = ({ imgSrc, name, subname,description, isRight=true }: IProps) =
           </Typography>
           </Stack>
           <Stack>
-          <Button color="secondary" variant="contained" sx={{ color: "white" }}>
+          <Button color="secondary" variant="contained" sx={{ color: "white" , textTransform:"capitalize"}}>
             Proceed to order <ChevronRight />
           </Button>
           </Stack>

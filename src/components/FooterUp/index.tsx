@@ -21,7 +21,7 @@ const FooterUp = () => {
         >
           Are you ready to order with the best deals?
         </Typography>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" sx={{textTransform:"capitalize"}}>
           <Typography p={1} fontWeight={700} color="white">
             Proceed to order
           </Typography>
